@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MovieFinder</title>
+
+    <link rel="stylesheet" href="2. style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🎬 MovieFinder
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#movies">Movies</a>
+        <a href="#favorites">❤️ Favorites</a>
+    </nav>
+
+    <button id="themeBtn">🌙</button>
+
+</header>
+
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">WELCOME TO MOVIEFINDER</p>
+
+        <h1>Find Your Next<br><span>Favorite Movie</span></h1>
+
+        <p>
+            Discover popular movies, explore genres,
+            check ratings and save your favorites.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a movie..."
+            >
+
+            <button onclick="searchMovies()">
+                🔍 Search
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="container" id="movies">
+
+    <div class="section-header">
+
+        <div>
+            <p class="subtitle">DISCOVER</p>
+            <h2>Popular Movies</h2>
+        </div>
+
+        <select id="genreFilter" onchange="filterMovies()">
+
+            <option value="all">All Genres</option>
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Animation">Animation</option>
+
+        </select>
+
+    </div>
+
+
+    <div class="movie-grid" id="movieGrid"></div>
+
+</section>
+
+
+<section class="container favorites-section" id="favorites">
+
+    <div class="section-header">
+
+        <div>
+            <p class="subtitle">YOUR COLLECTION</p>
+            <h2>❤️ My Favorites</h2>
+        </div>
+
+    </div>
+
+    <div class="movie-grid" id="favoriteGrid"></div>
+
+</section>
+
+
+<div class="modal" id="movieModal">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeModal()">×</button>
+
+        <div id="modalContent"></div>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <h3>🎬 MovieFinder</h3>
+
+    <p>
+        Discover movies. Find favorites. Enjoy cinema.
+    </p>
+
+    <p class="copyright">
+        © 2026 MovieFinder | Frontend Project
+    </p>
+
+</footer>
+
+
+<script src="3. script.js"></script>
+
+</body>
+</html>
